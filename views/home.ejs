@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Forum</title>
+</head>
+<body>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Forum</title>
+</head>
+<body>
+  <div class='container'>
+    <a href='/auth/login' class="btn btn-primary">Login</a>
+    <a href='/about' class="btn btn-outline-primary">About me</a>
+   <div>
+  <% articles.forEach(article => { %>
+  <div>
+    <div class="border border-info">
+      <div><a href="/article/<%= article.user %>" class="text-decoration-none"><%= article.title %></a></div>
+      <span>by: <a href='/<%= article.user %>'><%= article.user %></a>|</span>
+      <span>time: <%= article.time.toLocaleDateString() %></span>
+   </div>
+  </div>
+<% }); %> 
+</div> 
+   </div>
+  
+</body>
+</html>
+</body>
+</html>

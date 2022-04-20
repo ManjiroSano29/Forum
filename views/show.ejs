@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Forum</title>
+</head>
+<body>
+  <div class='container'>
+  <div><a href='/main' class="btn btn-secondary">Back</a></div>
+  <span><%= article.user %></span>
+  <span><%= article.time.toLocaleDateString() %></span>
+  <div class="fs-4"><%= article.title %></div>
+  <div><%= article.description %></div>
+  
+  <form action="" method="post">
+    <label for="comment">Add comment here</label>
+    <textarea name="comment" class="form-control" style="height: 150px" required></textarea>
+    <button type="submit" class="btn btn-success">Send</button>
+  </form>
+    <% comments.forEach(comment => { %>
+      <div class="border border-info">
+      <span><%= comment.article %></span>
+      <span><%= comment.time.toLocaleDateString() %></span>
+      <span><%= comment.time.toLocaleTimeString() %></span>
+      <div><%= comment.text %></div>
+   </div>
+    <% }) %>
+   </div>
+</body>
+</html>
