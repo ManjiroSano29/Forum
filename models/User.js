@@ -3,18 +3,9 @@ const { Schema } = mongoose;
 const Article = require('../models/Article');
 const Comment = require('../models/Comment');
 const userSchema = new Schema({
-  name: {
-    type: String,
-    
-  },
-  email: {
-    type: String,
-    
-  },
-  password: {
-    type: String,
-    
-  },
+  name: String,
+  email: String,
+  password: String,
   article: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Article'
