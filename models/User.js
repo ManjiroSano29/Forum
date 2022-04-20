@@ -22,8 +22,6 @@ const userSchema = new Schema({
   fullname: String,
   career: String,
   location: String,
-  resetPasswordToken: String,
-  resetPasswordExpires: Date
 });
 
 const User = mongoose.model('User', userSchema);
